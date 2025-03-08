@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+    <h1>Calculadora para noia</h1>
+
+    <label for="numero1">Digite o primeiro número:</label>
+    <input type="text" id="numero1" placeholder="Número">
+    <br><br>
+    <label for="numero2">Digite o segundo número:</label>
+    <input type="text" id="numero2" placeholder="Número">
+    <br><br>
+
+    <input type="button" onclick="soma()" value="Somar">
+    <input type="button" onclick="subtracao()" value="Subtrair">
+    <input type="button" onclick="multiplicacao()" value="Multiplicar">
+    <input type="button" onclick="divisao()" value="Dividir">
+
+    <script>
+        function soma() {
+            let numero1 = Number(document.getElementById('numero1').value);
+            let numero2 = Number(document.getElementById('numero2').value);
+            alert("Resultado: " + (numero1 + numero2));
+        }
+
+        function subtracao() {
+            let numero1 = Number(document.getElementById('numero1').value);
+            let numero2 = Number(document.getElementById('numero2').value);
+            alert("Resultado: " + (numero1 - numero2));
+        }
+
+        function multiplicacao() {
+            let numero1 = Number(document.getElementById('numero1').value);
+            let numero2 = Number(document.getElementById('numero2').value);
+            alert("Resultado: " + (numero1 * numero2));
+        }
+
+        function divisao() {
+            let numero1 = Number(document.getElementById('numero1').value);
+            let numero2 = Number(document.getElementById('numero2').value);
+            if (numero2 === 0) {
+                alert("Erro: divisão por zero!");
+            } else {
+                alert("Resultado: " + (numero1 / numero2));
+            }
+        }
+    </script>
+    
+</body>
+</html>
